@@ -39,6 +39,12 @@ public class Service implements IService {
     @Override
     public Compte findCompteByNum(int num) {
         // TODO Auto-generated method stub
+        for(Compte compte:comptes){
+            if(compte!=null && compte.getNumero()==num){
+                compte.affiche();
+            }
+        }
+        System.out.println("Le compte n'existe pas");
         return null;
     }
 
@@ -67,13 +73,33 @@ public class Service implements IService {
     @Override
     public void showCompte(String type) {
         // TODO Auto-generated method stub
-        
+        for(Compte compte:comptes){
+            if(compte!=null && compte.getType()==type){
+                compte.affiche();
+            }
+        }
     }
 
     @Override
     public void showCompte(Client client) {
         // TODO Auto-generated method stub
-        
+        for(Compte compte:comptes){
+            if(compte!=null && compte.getClient()==client){
+                compte.affiche();
+            }
+        }
+    }
+
+    @Override
+    public Client findClientByNum(int Num) {
+        // TODO Auto-generated method stub
+        for(Client client:clients){
+            if(client!=null && client.getNumero()==Num){
+                return client;
+            }
+        }
+        System.out.println("Le client n'existe pas");
+        return null;
     }
     
 }
