@@ -18,7 +18,7 @@ public interface IService {
       void showCompte(Client client);
       //7-Faire une Operation
       Compte findCompteByNum(int num);
-      Client findClientByNum(int Num);
+      Client findClientByNum(int num);
            //1-Depot
            //2-Retrait
            //3-Virement

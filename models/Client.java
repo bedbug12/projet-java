@@ -32,4 +32,10 @@ public class Client implements IAffiche {
         // TODO Auto-generated method stub
         System.out.println("Numero: " + numero + "Nom : "+ nom + " Prenom: "+ prenom );
     }
+    @Override
+    public boolean equals(Object obj) {
+        // TODO Auto-generated method stub
+
+        return this.numero==((Client)obj).getNumero();
+    }
 }

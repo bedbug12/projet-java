@@ -74,7 +74,7 @@ public class Service implements IService {
     public void showCompte(String type) {
         // TODO Auto-generated method stub
         for(Compte compte:comptes){
-            if(compte!=null && compte.getType()==type){
+            if(compte!=null && compte.getType().compareTo(type)==0){
                 compte.affiche();
             }
         }
@@ -84,21 +84,20 @@ public class Service implements IService {
     public void showCompte(Client client) {
         // TODO Auto-generated method stub
         for(Compte compte:comptes){
-            if(compte!=null && compte.getClient()==client){
+            if(compte!=null && compte.getClient().equals(client)){
                 compte.affiche();
             }
         }
     }
 
     @Override
-    public Client findClientByNum(int Num) {
+    public Client findClientByNum(int num) {
         // TODO Auto-generated method stub
         for(Client client:clients){
-            if(client!=null && client.getNumero()==Num){
+            if(client!=null && client.getNumero()==num){
                 return client;
             }
         }
-        System.out.println("Le client n'existe pas");
         return null;
     }
     

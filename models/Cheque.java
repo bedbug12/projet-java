@@ -6,7 +6,10 @@ public class Cheque extends Compte {
     public Cheque() {
         type="Cheque";
     }
-
+    public Cheque(double frais) {
+        type="Cheque";
+        this.frais=frais;
+    }
     public double getFrais() {
         return frais;
     }
